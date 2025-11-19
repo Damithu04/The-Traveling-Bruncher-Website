@@ -1,0 +1,121 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="Webtech.css">
+        <title>The Traveling Bruncher</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    </head>
+    <body>  
+        <!-- Navigation Bar -->
+        <nav> 
+            <div class="logo">
+                <img src="Layer4.png" alt="The Traveling Bruncher Logo" width="120" height="120">
+            </div>   
+            <ul>
+                <li><a href="#Home" class="activepage">Home</a></li>
+                <li><a href="menupage.html" target="_self">Menu</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#enter">Entertainment</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+                
+            </ul>
+            <a href="Orderpage.html" target="_blank" aria-label="order now"><button class="my-button">Order Now</button></a> 
+            
+        </nav>
+        
+        <!-- Hero Section -->
+        <div class="hero" id="Home">
+            <h1 class="hero-title">The <br> Traveling Bruncher</h1>
+            <h2 class="hero-subtitle"><i>"Your go-to brunch spot, where you savor the journey"</i></h2>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>   
+
+        <!-- Our Story Section -->
+        <div class="story-section">
+            <h1 id="story">Our Story</h1>
+            <p>
+                At The Traveling Bruncher, food isn’t just our business—it’s our passion. 
+                A rooftop bar with the city breeze located in the centre of Colombo. 
+                The best food chain for all the brunchers out there.
+                Where bold flavours meet a modern twist. 
+                Our journey is just as sweet and spicy as our menu.
+            </p>
+        </div>
+        <!--Bar Section-->
+        <div class="bar" id="Enter">
+            <h1> Roof Top Bar & DJ Nights </h1>
+            <p>
+                Perfect hangout place? Perfect partying place? 
+                Best view at night? Party high with the best artists? 
+                All in one place? Yes! The Traveling Bruncher is there for 
+                your brunch craves and to bring up your party vibe
+            </p>
+        </div>
+        <div class="DJ">
+        </div>
+        <section>
+            <div class="box">
+                <h1 class="box-h1" id="Location"> Our Location</h1>
+                <p class="box-p">
+                    6/46 Green Lanka Towers, Nawam Mawatha, Colombo, Sri Lanka 00200 <br><br>
+                    What are you waiting for? visit us and enjoy your brunch cravings and hit the party nights. Located 
+                    in the heart of Colombo. Covered with skyscrapers and with the view of the beach. Parking space availabe
+                    24 hours for you!
+                </p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7575775099685!2d79.8502515!3d6.9195585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259ced7c6707d%3A0xc2789534b126a522!2sThe%20Traveling%20Bruncher!5e0!3m2!1sen!2slk!4v1739799631634!5m2!1sen!2slk"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="location"></iframe>
+        </section>
+        <div class="last">    
+            <img src="GIFT.2.png" alt="gift photo" class="discount" width="1200" height="500">
+        </div>
+
+        <button class="discount-button" onclick="openPopup()">Apply for Discount</button>
+
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Apply for Discount</h2>
+            <p>Enter your email to apply for an exclusive discount.</p>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button class="submit-btn" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+        <script src="Webtech.js"></script>
+
+        <footer class="footer" id="Contact">
+            <div class="container">
+                <div class="footer-section">
+                    <p class="terms">Terms & Conditions</p>
+                    <p style="color: white;"><i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong></p>
+                    <p>6/46 Green Lanka Towers, Nawam Mawatha, Colombo, Sri Lanka 00200</p>
+                    <p><i class="far fa-clock"></i> <strong>OPEN HOURS</strong> : Wed to Sun 9am to 11pm</p>
+                </div>
+                
+                <div class="footer-section">
+                    <p class="tel" style="color: white;"><i class="fas fa-phone"></i> <strong>TELEPHONE</strong></p>
+                    <p class="num1">+94 712 3456 789<br></p>
+                    <p class="num2"> 0112 345 678</p>
+                </div>  
+        
+                <div class="footer-section">
+                    <p class="privacy">Privacy Policy</p>
+                    <p class="email" style="color: white;"><i class="fas fa-envelope"></i> <strong>EMAIL</strong></p>
+                    <p class="email1">thetravelingbruncher@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/thetravelingbruncher/?hl=en" target="_blank" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/thetravelingbruncher/" target="_blank" aria-label="facebook"><i class="fab fa-facebook" ></i></a>
+                        <a href="https://www.tiktok.com/@thetravelingbruncher?_t=ZS-8upaXuk3xnr&_r=1" aria-label="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2025 The Traveling Bruncher</p>
+        </footer>
+    </body>
+</html>
