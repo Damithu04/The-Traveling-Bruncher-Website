@@ -7,3 +7,16 @@ function openPopup() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+// Function to handle form submission
+function submitForm() {
+    let email = document.getElementById("email").value;
+
+    if (email === "") {
+        alert("Please enter a valid email address.");
+    } else {
+        alert("Thank you for applying for the discount! We’ll notify you soon.");
+        document.getElementById("email").value = ""; 
+        closePopup();
+    }
+}
