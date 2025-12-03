@@ -9,5 +9,79 @@
     <script src="loadMenu.js" defer></script>
     <script src="Orderpage.js" defer></script>
 </head>
+<body>
+    <nav> 
+        <div class="logo">
+            <img src="Layer4.png" alt="The Traveling Bruncher Logo" width="120" height="120">
+        </div>   
+        <ul>
+            <li><a href="Webtech.html" target="_self">Home</a></li>
+            <li><a href="menupage.html" target="_self">Menu</a></li>
+            <li><a href="#" class="activepage">Order</a></li>
+    
+            <li class="dropdown">
+                <a href="#picks" class="dropbtn">Brunchtastic Picks ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#picks">Brunchtastic Picks</a></li>
+                    <li><a href="#eggy">Eggceptional Favs</a></li>
+                    <li><a href="#sweety">Sweet Surrender</a></li>
+                    <li><a href="#burgers">Bomb Burgers</a></li>
+                    <li><a href="#pastay">Patta Pasta</a></li>
+                    
+                </ul>
+            </li>
 
+            <li class="dropdown">
+                <a href="#nifty" class="dropbtn">Nifty Nibbles ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#nifty">Nifty Nibbles</a></li>
+                    <li><a href="#pizza">Poppin' Pizzas</a></li>
+                    <li><a href="#extra">Feelin' Extra</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#booze" class="dropbtn">The Booze Cruise ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#booze">The Booze Cruise</a></li>
+                    <li><a href="#beercider">Beers and Cider</a></li>
+                    <li><a href="#localgin">Local Gin</a></li>
+                    <li><a href="#localvodka">Local Vodka</a></li>
+                    <li><a href="#localrum">Local Rum</a></li>
+                    <li><a href="#localwhiskey">Local Whiskey</a></li>
+                    <li><a href="#importedspirits">Imported Spirits</a></li>
+                    <li><a href="#wines">Wines</a></li>
+                    <li><a href="#pitchers">Pitchers</a></li>
+                </ul>
+            </li>   
+
+            <li class="dropdown">
+                <a href="#otherdrinks">Other Drinks ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#soothin">Soothin' Softies</a></li>
+                    <li><a href="#cuppa">Slo-Flo Cuppa Joe</a></li>
+                </ul>
+            </li>
+            <li><a href="#smoke">Smoke Corner</a></li>
+            <li><a href="#sundowner">Sundowner Cocktails</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <i class="fa-solid fa-cart-shopping" onclick="openPopup()" style="position: relative; margin-top: 3; margin-left: 4;">
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </i>
+            </li>
+
+            <div id="cart-popup" class="cart-popup">
+                <div class="cart-content">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <h2 style="color: #000000; font-family: italiana; margin-top: -60;">Shopping Cart</h2>
+                    <ul id="cart-items" style="color: #000000; font-size: 13; font-family: k2d; display:grid; margin-top: 20; line-height: 2;"></ul>
+                    <h3 style="color: #000000; margin-top: 30; font-family:Arial, Helvetica, sans-serif; font-size: 20; margin-bottom: 10;">Total: <span id="total-price">0</span> LKR</h3>
+                    <a href="checkout.html"><button class="checkout-btn" style="margin-bottom: -50;">Proceed to Checkout</button></a>
+                </div>
+            </div>
+
+        </ul>
+    </nav>
+    
 </html>
