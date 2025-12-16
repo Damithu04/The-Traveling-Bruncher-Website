@@ -1,0 +1,616 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    --bg-color: #0a0a0a;
+    /* Deep Black Background */
+    --text-primary: #ffffff;
+    /* White Text */
+    --text-secondary: #b3b3b3;
+    /* Grey Text */
+    --accent: #F07762;
+    /* Salmon Brand Color */
+    --accent-glow: rgba(240, 119, 98, 0.4);
+    /* Glow Effect */
+    --font-head: 'Italiana', serif;
+    --font-body: 'K2D', sans-serif;
+    --transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. LOADER (The Loading Screen)
+   ========================================= */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    /* Stays on top of everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-content h2 {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.loading-bar {
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    animation: load 2s ease-in-out forwards;
+}
+
+@keyframes load {
+    to {
+        width: 150px;
+    }
+}
+
+/* =========================================
+   3. NAVIGATION BAR
+   ========================================= */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 5%;
+    transition: 0.4s;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Class added via JS when scrolling */
+nav.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-order {
+    border: 1px solid var(--text-primary);
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.btn-order:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Puts image behind text */
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image fills screen */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Darkens the image */
+}
+
+.hero-content {
+    z-index: 2;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.subtitle {
+    letter-spacing: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-family: var(--font-head);
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #ddd;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+/* =========================================
+   5. SECTIONS (Shared Styles)
+   ========================================= */
+.section-padding {
+    padding: 100px 5%;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* =========================================
+   6. OUR STORY
+   ========================================= */
+.story-text h2 {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.story-img img {
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(20%);
+    transition: 0.6s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-img:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* =========================================
+   7. MENU GALLERY (Showcase)
+   ========================================= */
+.showcase {
+    background-color: #0f0f0f;
+}
+
+.section-title {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.hover-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(100%);
+    transition: 0.4s;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hover-info h3 {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.gallery-item:hover .hover-info {
+    transform: translateY(0);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-outline {
+    text-decoration: none;
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* =========================================
+   8. VIBE SECTION (DJ)
+   ========================================= */
+.vibe-section {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    /* Remove margin to flush with other sections */
+}
+
+.vibe-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.vibe-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vibe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.vibe-content h2 {
+    font-family: var(--font-head);
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.vibe-content p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* =========================================
+   9. FOOTER
+   ========================================= */
+footer {
+    padding: 80px 5% 30px;
+    background-color: #050505;
+    border-top: 1px solid #1a1a1a;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-info h3 {
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.highlight {
+    color: #fff !important;
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* =========================================
+   10. SCROLL ANIMATIONS (Reveal Classes)
+   ========================================= */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-delay,
+.reveal-delay-2 {
+    opacity: 0;
+    transition: var(--transition);
+}
+
+/* Active States (Added by JS) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-delay.active {
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+.reveal-delay-2.active {
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+
+/* =========================================
+   11. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Fonts */
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .story-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .vibe-content h2 {
+        font-size: 3rem;
+    }
+
+    /* Layout */
+    .grid-2,
+    .grid-footer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Reorder Story Section for Mobile (Image first) */
+    .story-img {
+        order: 1;
+    }
+
+    .story-text {
+        order: 2;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hidden by default on mobile */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #0a0a0a;
+        flex-direction: column;
+        padding: 40px 0;
+        border-bottom: 1px solid #222;
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Shown when toggled via JS */
+    }
+}
