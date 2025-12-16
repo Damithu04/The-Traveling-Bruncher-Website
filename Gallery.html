@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Feast | The Traveling Bruncher</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <h2>Loading Gallery...</h2>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="Webtech.html" class="logo">
+                <img src="Layer4.png" alt="TTB Logo">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Webtech.html">Home</a></li>
+                <li><a href="menupage.html">Menu</a></li>
+                <li><a href="menupage.html" class="btn-order">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header gallery-header">
+        <h1 class="main-title fade-in-up">A Visual Feast</h1>
+        <p class="subtitle fade-in-up" style="animation-delay: 0.2s;">The Art of Brunch & Vibes</p>
+    </header>
+
+    <section class="gallery-section container">
+        <div class="gallery-grid">
+
+            <div class="gallery-item fade-in-up">
+                <img src="food-1.jpg" alt="Food Shot">
+                <div class="overlay">
+                    <h3>Signature Dish</h3>
+                    <p>Culinary perfection.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item tall fade-in-up" style="animation-delay: 0.1s;">
+                <img src="food-2.jpg" alt="Tall Drink">
+                <div class="overlay">
+                    <h3>Tall Refreshment</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item tall fade-in-up" style="animation-delay: 0.2s;">
+                <img src="DSCF6645.jpg" alt="Affogato Dessert">
+                <div class="overlay">
+                    <h3>Espresso Pour</h3>
+                    <p>Hot meets cold.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in-up" style="animation-delay: 0.3s;">
+                <img src="DSC08931(1).jpg" alt="Latte Art">
+                <div class="overlay">
+                    <h3>Barista Skills</h3>
+                    <p>Perfect pour.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide fade-in-up" style="animation-delay: 0.4s;">
+                <img src="DSC09151.jpg" alt="Loaded Fries">
+                <div class="overlay">
+                    <h3>Loaded Fries</h3>
+                    <p>Cheesy indulgence.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in-up" style="animation-delay: 0.2s;">
+                <img src="DSC09169.jpg" alt="Frozen Cocktail">
+                <div class="overlay">
+                    <h3>Summer Chill</h3>
+                    <p>Refreshing blend.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item big fade-in-up" style="animation-delay: 0.3s;">
+                <img src="DSC09032.jpg" alt="Curry Platter">
+                <div class="overlay">
+                    <h3>The Dipper</h3>
+                    <p>Spice and crunch.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in-up" style="animation-delay: 0.4s;">
+                <img src="DSC09108.jpg" alt="Dessert Toast">
+                <div class="overlay">
+                    <h3>Sweet Tooth</h3>
+                    <p>Caramel drizzle.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide fade-in-up" style="animation-delay: 0.5s;">
+                <img src="DSC09099(1).jpg" alt="Gourmet Toast">
+                <div class="overlay">
+                    <h3>Gourmet Toast</h3>
+                    <p>Savory toppings.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+
+    <footer id="location">
+        <div class="container grid-footer">
+            <div class="footer-info">
+                <h3>Visit Us</h3>
+                <p>6/46 Green Lanka Towers,<br>Nawam Mawatha, Colombo</p>
+            </div>
+            <div class="copyright">
+                <p>© 2025 The Traveling Bruncher.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Gallery.js"></script>
+</body>
+
+</html>

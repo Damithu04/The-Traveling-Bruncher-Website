@@ -1,0 +1,213 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Reuse variables from Home.css implicitly */
+:root {
+    --accent: #00b1bb;
+    --accent-glow: rgba(0, 177, 187, 0.5);
+    --font-head: 'Italiana', serif;
+    --font-ui: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #050505;
+    color: #fff;
+    font-family: var(--font-ui);
+    margin: 0;
+}
+
+/* Header adjustments */
+.gallery-header {
+    background: linear-gradient(to bottom, #0f0f0f, #050505);
+    padding-top: 150px;
+    padding-bottom: 80px;
+    /* --- NEW: Centers the text --- */
+    text-align: center;
+}
+
+.main-title {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    text-shadow: 0 0 20px var(--accent-glow);
+    margin: 0;
+}
+
+.subtitle {
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* --- THE GALLERY GRID --- */
+.gallery-section {
+    padding-bottom: 100px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Creates a dense grid with columns at least 250px wide */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* This is crucial: it packs items tightly, filling gaps */
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
+/* Individual Gallery Item Container */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* The Image itself */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+/* --- LAYOUT VARIATIONS --- */
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* --- HOVER EFFECTS --- */
+.gallery-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px var(--accent-glow);
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Text on Hover */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(100%);
+    transition: 0.4s ease;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay h3 {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* --- LIGHTBOX MODAL --- */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 50px var(--accent-glow);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 20px 0;
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-lightbox:hover {
+    color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .wide,
+    .big {
+        grid-column: span 1;
+    }
+
+    .lightbox-content {
+        width: 95%;
+    }
+}
