@@ -1,145 +1,81 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | The Traveling Bruncher</title>
-    <link rel="stylesheet" type="text/css" href="menupage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=K2D:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="menupage.css">
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header  id="menu">
-        <nav> 
-            <div class="logo">
-            <img src="Layer4.png" width="120" height="120" alt="The Traveling Bruncher Logo">
-            </div>   
-            <ul>
-            <li><a href="Webtech.html" target="_self">Home</a></li>
-            <li><a href="#menu" class="activepage">Menu</a></li>
-            <li><a href="#" onclick="openFoodMenu()">Food Menu</a></li>
-            <li><a href="#" onclick="openDrinksMenu()">Drinks Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="Orderpage.html" target="_self">
-                <button class="order-button">Order Now</button>
-            </a> 
-            
-            <script>
-                function openFoodMenu() {
-                    window.open('FOOD MENU_TTB_2024.pdf');
-                }
-                function openDrinksMenu() {
-                    window.open('DRINKS MENU_TTB_2024.pdf');
-                }
-            </script>
-        </nav>
-                
-    </header>
-    <script>
-        // Optional: Smooth scrolling effect for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    
-    <!-- Menu Section -->
-    <h2 class="brchpicks">MENU</h2>
-    <section class="menu">
-        <h1>BRUNCHTASTIC PICKS</h1>
-        <div class="row">
-            <div class="column-1">
-                <img src="DSC08956.jpg" width="385" alt="DSC08956">
-            </div>
-            <div class="column-2">
-                <img src="DSC09032.jpg" width="385" alt="DSC09032">
-            </div>
-    
-            <div class="column-3">
-                <img src="DSC09157.jpg" width="385" alt="DSC09157">
-            </div>
-            <div class="column-4">
-                <img src="DSC09236.jpg" width="385" alt="DSC09236">
-            </div>
+    <div id="loader">
+        <div class="loader-content">
+            <h2>Loading Menu...</h2>
+            <div class="loading-bar"></div>
         </div>
-    </section>
-    <section class="menu1">
-        <h2 class="brchpicks1">THE BOOZE CRUISE</h2>
-        <div class="row">
-            <div class="column-1">
-                <img src="DSCF6699.jpg" width="385" alt="DSCF6699">
-            </div>
-            <div class="column-2">
-                <img src="DSCF6645.jpg" width="385" alt="DSCF6645">
-            </div>
-    
-            <div class="column-3">
-                <img src="DSC09169.jpg" width="385" alt="DSC09169">
-            </div>
-            <div class="column-4">
-                <img src="DSC08931(1).jpg" width="385" alt="DSC08931(1)">
-            </div>
-        </div>
-    </section>
-    <section class="menu2">
-        <h2 class="brchpicks2">SWEET SURRENDER</h2>
-        <div class="row">
-            <div class="column-1">
-                <img src="DSC09108.jpg" width="385" alt="DSC09108">
-            </div>
-            <div class="column-2">
-                <img src="DSC09192.jpg" width="385" alt="DSC09192">
-            </div>
-    
-            <div class="column-3">
-                <img src="DSC09256.jpg" width="385" alt="DSC09256">
-            </div>
-            <div class="column-4">
-                <img src="DSC09295.jpg" width="385" alt="DSC09295">
-            </div>
-        </div>
-    </section>
-    <div class="lastpage">
-        <h1 class="lastpage-text">" It's not just <br> food, it's an <br> experience "</h1>
     </div>
-    
-    <footer class="footer" id="Contact">
-        <div class="container">
-            <div class="footer-section">
-                <p class="terms">Terms & Conditions</p>
-                <p style="color: white;"><i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong></p>
-                <p>6/46 Green Lanka Towers, Nawam Mawatha, Colombo, Sri Lanka 00200</p>
-                <p><i class="far fa-clock"></i> <strong>OPEN HOURS</strong> : Wed to Sun 9am to 11pm</p>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="Webtech.html" class="logo">
+                <img src="Layer4.png" alt="TTB Logo">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            
-            <div class="footer-section">
-                <p class="tel" style="color: white;"><i class="fas fa-phone"></i> <strong>TELEPHONE</strong></p>
-                <p class="num1">+94 712 3456 789<br></p>
-                <p class="num2"> 0112 345 678</p>
-            </div>  
-    
-            <div class="footer-section">
-                <p class="privacy">Privacy Policy</p>
-                <p class="email" style="color: white;"><i class="fas fa-envelope"></i> <strong>EMAIL</strong></p>
-                <p class="email1">thetravelingbruncher@gmail.com</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/thetravelingbruncher/?hl=en" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/thetravelingbruncher/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.tiktok.com/@thetravelingbruncher?_t=ZS-8upaXuk3xnr&_r=1" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <ul class="nav-links">
+                <li><a href="Webtech.html">Home</a></li>
+                <li><a href="menupage.html" class="active">Menu</a></li>
+                <li><a href="Webtech.html">The Vibe</a></li>
+                <li><a href="Webtech.html">Find Us</a></li>
+                <li><a href="Orderpage.html" class="btn-order">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="main-title">Our Menu</h1>
+        <p class="subtitle">A Culinary Journey</p>
+    </header>
+
+    <div class="menu-layout container">
+        <aside class="menu-sidebar">
+            <ul id="category-nav">
+            </ul>
+        </aside>
+
+        <main id="menu-container">
+        </main>
+    </div>
+
+    <footer id="location">
+        <div class="container grid-footer">
+            <div class="footer-info">
+                <h3>Visit Us</h3>
+                <p>6/46 Green Lanka Towers,<br>Nawam Mawatha, Colombo</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
+            <div class="copyright">
+                <p>© 2025 The Traveling Bruncher.</p>
+            </div>
         </div>
-        <p class="copyright">© 2025 The Traveling Bruncher</p>
     </footer>
-    </body>
+
+    <script src="script.js"></script>
+    <script src="loadmenu.js"></script>
+</body>
+
 </html>
