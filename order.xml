@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <category id="picks" name="BRUNCHTASTIC PICKS">
+        <item>
+            <name>KADEY VIBE</name>
+            <description>Rosti Pan, home-made beef curry, tangy onion and kasundi mango chutney.</description>
+            <price currency="LKR">2300</price>
+        </item>
+        <item>
+            <name>KRUSTY KUKULA</name>
+            <description>Crispy chicken schnitzel, brioche bun, signature siracha hollandaise, pickled gherkins.</description>
+            <price currency="LKR">2300</price>
+        </item>
+        <item>
+            <name>KOREAN KUKULA</name>
+            <description>Crispy Korean fried chicken, toasted brioche bun, garlic sauce, sesame, spring onions.</description>
+            <price currency="LKR">2700</price>
+        </item>
+        <item>
+            <name>MR. KRABS</name>
+            <description>Buttery crab toast, miso hollandaise, lemon zest, chives.</description>
+            <price currency="LKR">3100</price>
+        </item>
+        <item>
+            <name>LANKAN MONSIEUR</name>
+            <description>Toasted brioche with mustard cream sauce, black pork ham, cheese, topped with a fried egg.</description>
+            <price currency="LKR">2900</price>
+        </item>
+        <item>
+            <name>BLT</name>
+            <description>Bacon, lettuce, tomato, fried egg, homemade brioche bun.</description>
+            <price currency="LKR">2800</price>
+        </item>
+        <item>
+            <name>WAMBATU PARMIGIANA</name>
+            <description>Fried eggplant, pomodoro sauce, mozzarella.</description>
+            <price currency="LKR">2900</price>
+        </item>
+        <item>
+            <name>HALLOUMI TOAST</name>
+            <description>Toasted halloumi, salad of cucumber, passion fruit, radish, mint, tomato.</description>
+            <price currency="LKR">2850</price>
+        </item>
+    </category>
+    
+    <category id="eggy" name="EGGCEPTIONAL FAVES">
+        <item>
+            <name>POSH BITTHARA</name>
+            <description>Brioche, smashed avocado, tomato, poached eggs, hollandaise sauce.</description>
+            <price currency="LKR">2300</price>
+        </item>
+        <item>
+            <name>POSH BITTHARA with bacon</name>
+            <description>with bacon</description>
+            <price currency="LKR">2600</price>
+        </item>
+        <item>
+            <name>POSH BITTHARA with smocked salmon</name>
+            <description>with smocked salmon</description>
+            <price currency="LKR">2800</price>
+        </item>
+        <item>
+            <name>POSH BITTHARA with mushroom</name>
+            <description>with mushroom</description>
+            <price currency="LKR">2300</price>
+        </item>
+        <item>
+            <name>POSH BITTHARA with crab</name>
+            <description>with crab</description>
+            <price currency="LKR">2550</price>
+        </item>
+    </category>
+
+    <category id="sweety" name="SWEET SURRENDER">
+        <item>
+            <name>PANIYA</name>
+            <description>Sweet brioche soaked in coconut cream, vanilla ice cream, blueberry compote, poached eggs, hollandaise sauce.</description>
+            <price currency="LKR">2400</price>
+        </item>
+        <item>
+            <name>APPLE PIE CROFFLE</name>
+            <description>Caramelized croissant waffle, cinnamon apple compote, vanilla ice cream.</description>
+            <price currency="LKR">2200</price>
+        </item>
+        <item>
+            <name>TIRAMISU PANCAKES</name>
+            <description>Coffee-infused mascarpone, whipped cream, cocoa powder.</description>
+            <price currency="LKR">2400</price>
+        </item>
+        <item>
+            <name>HONG KONG PANIYA</name>
+            <description>French toast, white chocolate mousse, strawberries, nougat.</description>
+            <price currency="LKR">2500</price>
+        </item>
+    </category>
+
+    <category id="burgery" name="BOMB BURGERS">
+        <item>
+            <name>THE LOKKA</name>
+            <description>Brioche bun, beef patty, cheddar cheese, caramelized onions, black truffle mayo.</description>
+            <price currency="LKR">2800</price>
+        </item>
+        <item>
+            <name>THE LOKKA with beef</name>
+            <description>with beef</description>
+            <price currency="LKR">2800</price>
+        </item>
+        <item>
+            <name>THE LOKKA with chicken</name>
+            <description>with chicken</description>
+            <price currency="LKR">2800</price>
+        </item>
+        <item>
+            <name>THE LOKKA with mushroom (Veg)</name>
+            <description>with mushroom (Veg)</description>
+            <price currency="LKR">2300</price>
+        </item>
+        <item>
+            <name>THE CHOOTY</name>
+            <description>Wagyu beef, cheddar cheese, caramelized onions, mustard, gherkins.</description>
+            <price currency="LKR">2500</price>
+        </item>
+        <item>
+            <name>BIG D N SHI</name>
+            <description>Panko-fried modha, mayo, lettuce.</description>
+            <price currency="LKR">2800</price>
+        </item>
+    </category>
+
+    <category id="pastay" name="PATTA PASTA">
+        <item>
+            <name>CARBONARA</name>
+            <description>Pasta, bacon, poached egg.</description>
+            <price currency="LKR">2100</price>
+        </item>
+        <item>
+            <name>FUNGHI</name>
+            <description>Mushroom sauce, parmesan cheese.</description>
+            <price currency="LKR">2100</price>
+        </item>
+        <item>
+            <name>PESTO PRAWN</name>
+            <description>Pesto sauce, tiger prawns, choice of pasta.</description>
+            <price currency="LKR">2300</price>
+        </item>
+    </category>
+    <category id="nibbles" name="NIFTY NIBBLES (3PM ONWARDS)">
+        <item>
+            <name>HOT BUTTER CUTTLEFISH</name>
+            <description>Spicy and crispy cuttlefish.</description>
+            <price currency="LKR">2000</price>
+        </item>
+        <item>
+            <name>CHICKEN TENDERS</name>
+            <description>Golden fried chicken tenders.</description>
+            <price currency="LKR">1800</price>
+        </item>
+        <item>
+            <name>BUFFALO WINGS</name>
+            <description>Spicy buffalo wings.</description>
+            <price currency="LKR">1900</price>
+        </item>
+        <item>
+            <name>DEVILLED CHICKEN</name>
+            <description>Spicy and tangy devilled chicken.</description>
+            <price currency="LKR">1800</price>
+        </item>
+        <item>
+            <name>CHICKEN SKEWERS</name>
+            <description>Grilled chicken skewers.</description>
+            <price currency="LKR">1800</price>
+        </item>
+        <item>
+            <name>FRENCH FRIES</name>
+            <description>Crispy french fries.</description>
+            <price currency="LKR">1300</price>
+        </item>
+        <item>
+            <name>LOADED FRIES (MUSH / BACON)</name>
+            <description>Fries loaded with mushrooms or bacon.</description>
+            <price currency="LKR">1600</price>
+        </item>
+    </category>
+
+    <category id="pizzay" name="POPPIN’ PIZZAS (3PM ONWARDS)">
+        <item>
+            <name>MARGHERITA</name>
+            <description>Classic pizza with tomato, mozzarella, and basil.</description>
+            <price currency="LKR">3200</price>
+        </item>
+        <item>
+            <name>FOUR CHEESE</name>
+            <description>Pizza with a blend of four cheeses.</description>
+            <price currency="LKR">3500</price>
+        </item>
+        <item>
+            <name>SPICY CHICKEN</name>
+            <description>Pizza with spicy chicken toppings.</description>
+            <price currency="LKR">3550</price>
+        </item>
+        <item>
+            <name>BACON AND CHEESE</name>
+            <description>Pizza with bacon and cheese toppings.</description>
+            <price currency="LKR">3550</price>
+        </item>
+        <item>
+            <name>PEPPERONI</name>
+            <description>Pizza with pepperoni toppings.</description>
+            <price currency="LKR">3800</price>
+        </item>
+        <item>
+            <name>BACON AND BLUE CHEESE</name>
+            <description>Pizza with bacon and blue cheese toppings.</description>
+            <price currency="LKR">3800</price>
+        </item>
+        <item>
+            <name>PESTO PRAWN</name>
+            <description>Pizza with pesto sauce and prawn toppings.</description>
+            <price currency="LKR">3900</price>
+        </item>
+    </category>
+
+    <category id="extray" name="FEELIN’ EXTRA">
+        <item>
+            <name>PORK</name>
+            <price currency="LKR">800</price>
+        </item>
+        <item>
+            <name>BEEF</name>
+            <price currency="LKR">800</price>
+        </item>
+        <item>
+            <name>PEPPERONI</name>
+            <price currency="LKR">800</price>
+        </item>
+        <item>
+            <name>CHEESE</name>
+            <price currency="LKR">700</price>
+        </item>
+        <item>
+            <name>BACON</name>
+            <price currency="LKR">700</price>
+        </item>
+        <item>
+            <name>CHICKEN</name>
+            <price currency="LKR">700</price>
+        </item>
+    </category>
+
+    <category id="boozey" name="THE BOOZE CRUISE">
+        <subcategory id="beercidery" name="BEER AND CIDER">
+            <item>
+                <name>LION LARGER</name>
+                <price currency="LKR">750</price>
+            </item>
+            <item>
+                <name>LION ICE</name>
+                <price currency="LKR">750</price>
+            </item>
+            <item>
+                <name>CARLSBERG</name>
+                <price currency="LKR">800</price>
+            </item>
+            <item>
+                <name>CARLSBERG SMOOTH</name>
+                <price currency="LKR">1300</price>
+            </item>
+            <item>
+                <name>CIDER (APPLE)</name>
+                <price currency="LKR">800</price>
+            </item>
+            <item>
+                <name>CIDER (BLACKBERRY)</name>
+                <price currency="LKR">800</price>
+            </item>
+        </subcategory>
+        <subcategory id="localgin" name="LOCAL GIN">
+            <item>
+                <name>ROCKLAND DRY GIN</name>
+                <price currency="LKR">600</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>ROCKLAND DRY GIN</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>VA LONDON DRY GIN</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>LONDON DRY GIN</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>CAPTAIN CRUISE</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+        </subcategory>
+        <subcategory id="localvodka" name="LOCAL VODKA">
+            <item>
+                <name>ALL BLUE</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>ERISTOFF</name>
+                <price currency="LKR">600</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>ERISTOFF</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>KEROFF</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>TUSKER</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+        </subcategory>
+        <subcategory id="localrum" name="LOCAL RUM">
+            <item>
+                <name>ROCKLAND</name>
+                <price currency="LKR">600</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>ROCKLAND</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>CALYPSO</name>
+                <price currency="LKR">600</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>CALYPSO</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+        </subcategory>
+        <subcategory id="localwhiskeyy" name="LOCAL WHISKY">
+            <item>
+                <name>VA WHISKY</name>
+                <price currency="LKR">14000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>V AND A WHISKY</name>
+                <price currency="LKR">600</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>V AND A WHISKY</name>
+                <price currency="LKR">11000</price>
+                <description>Bottle</description>
+            </item>
+        </subcategory>
+        <subcategory id="importedspirits" name="IMPORTED SPIRITS">
+            <item>
+                <name>ABSOLUTE VODKA</name>
+                <price currency="LKR">1000</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>ABSOLUTE VODKA</name>
+                <price currency="LKR">27000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>BLACK LABEL</name>
+                <price currency="LKR">1300</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>BLACK LABEL</name>
+                <price currency="LKR">38000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>GORDON’S GIN</name>
+                <price currency="LKR">1300</price>
+                <description>25ml</description>
+            </item>
+            <item>
+                <name>GORDON’S GIN</name>
+                <price currency="LKR">24000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>BROKER’S PINK GIN</name>
+                <price currency="LKR">24000</price>
+                <description>Bottle</description>
+            </item>
+            <item>
+                <name>JAGERMEISTER</name>
+                <price currency="LKR">36000</price>
+                <description>Bottle</description>
+            </item>
+        </subcategory>
+    </category>
+
+    <category id="wines" name="WINES (125ml)">
+        <item>
+            <name>WHITE WINE</name>
+            <price currency="LKR">1400</price>
+            <description>Glass</description>
+        </item>
+        <item>
+            <name>WHITE WINE</name>
+            <price currency="LKR">8500</price>
+            <description>Bottle</description>
+        </item>
+        <item>
+            <name>RED WINE</name>
+            <price currency="LKR">1400</price>
+            <description>Glass</description>
+        </item>
+        <item>
+            <name>RED WINE</name>
+            <price currency="LKR">8500</price>
+            <description>Bottle</description>
+        </item>
+    </category>
+
+    <category id="pitchers" name="PITCHERS">
+        <item>
+            <name>SANGRIA (PITCHER)</name>
+            <price currency="LKR">9500</price>
+        </item>
+        <item>
+            <name>MIMOSA (PITCHER)</name>
+            <price currency="LKR">9500</price>
+        </item>
+        <item>
+            <name>BULLFROG (PITCHER)</name>
+            <price currency="LKR">15500</price>
+        </item>
+        <item>
+            <name>LIIT (PITCHER)</name>
+            <price currency="LKR">13500</price>
+        </item>
+    </category>
+
+    <category id="soothinsofties" name="SOOTHIN’ SOFTIES">
+        <item>
+            <name>COKE</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>SPRITE</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>GINGER BEER (EGB)</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>LEMONADE</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>SODA</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>TONIC</name>
+            <price currency="LKR">350</price>
+        </item>
+        <item>
+            <name>BOTTLED WATER</name>
+            <price currency="LKR">250</price>
+        </item>
+        <item>
+            <name>REDBULL</name>
+            <price currency="LKR">1300</price>
+        </item>
+        <item>
+            <name>MANGO JUICE</name>
+            <price currency="LKR">700</price>
+        </item>
+        <item>
+            <name>PASSION JUICE</name>
+            <price currency="LKR">700</price>
+        </item>
+        <item>
+            <name>NARANG JUICE</name>
+            <price currency="LKR">700</price>
+        </item>
+    </category>
+
+    <category id="shootery" name="SHOOTERS">
+        <item>
+            <name>TEQUILA</name>
+            <price currency="LKR">1300</price>
+        </item>
+        <item>
+            <name>KAMIKAZE</name>
+            <price currency="LKR">1000</price>
+        </item>
+    </category>
+
+    <category id="cuppay" name="SLO-FLO CUPPA JOE">
+        <item>
+            <name>ESPRESSO (DOUBLE)</name>
+            <price currency="LKR">650</price>
+        </item>
+        <item>
+            <name>BOMBÓN</name>
+            <price currency="LKR">650</price>
+        </item>
+        <item>
+            <name>CAPPUCCINO</name>
+            <price currency="LKR">850</price>
+        </item>
+        <item>
+            <name>FLAT WHITE</name>
+            <price currency="LKR">850</price>
+        </item>
+        <item>
+            <name>LATTE</name>
+            <price currency="LKR">850</price>
+        </item>
+        <item>
+            <name>AMERICANO</name>
+            <price currency="LKR">750</price>
+        </item>
+        <item>
+            <name>BANGKOK WALIN</name>
+            <price currency="LKR">900</price>
+        </item>
+        <item>
+            <name>AFFOGATO</name>
+            <price currency="LKR">850</price>
+        </item>
+        <item>
+            <name>ICED LATTE</name>
+            <price currency="LKR">850</price>
+        </item>
+        <item>
+            <name>HOT CHOCOLATE</name>
+            <price currency="LKR">900</price>
+        </item>
+        <item>
+            <name>MOCHA</name>
+            <price currency="LKR">900</price>
+        </item>
+        <item>
+            <name>S’MORES HOT CHOCOLATE</name>
+            <price currency="LKR">1300</price>
+        </item>
+    </category>
+    <category id="smokey" name="SMOKE CORNER">
+            <item>
+                <name>Dunhill</name>
+                <price currency="LKR">4000</price>
+            </item>
+            <item>
+                <name>Gold Leaf</name>
+                <price currency="LKR">4000</price>
+            </item>
+    </category>
+    <category id="sundownery" name="SUNDOWNER COCKTAILS">
+            <subcategory id="patta" name="PATTA RANGE">
+                <item>
+                    <name>PATTA PEACH</name>
+                    <description>A TTB fave! Gin mixed with delicious flavored syrup and lime juice, topped off with bubbly soda.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>PATTA PASSION</name>
+                    <description>A TTB fave! Gin mixed with delicious flavored syrup and lime juice, topped off with bubbly soda.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>PATTA APPLE</name>
+                    <description>A TTB fave! Gin mixed with delicious flavored syrup and lime juice, topped off with bubbly soda.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>PATTA BLUEBERRY</name>
+                    <description>A TTB fave! Gin mixed with delicious flavored syrup and lime juice, topped off with bubbly soda.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>PATTA STRAWBERRY</name>
+                    <description>A TTB fave! Gin mixed with delicious flavored syrup and lime juice, topped off with bubbly soda.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+            </subcategory>
+            <subcategory id="daiquiri" name="DAMN GOOD DAIQUIRI">
+                <item>
+                    <name>PASSION FRUIT</name>
+                    <description>Just as its name suggests! Made with Rum and a squeeze of lime.</description>
+                    <price currency="LKR">1400</price>
+                </item>
+                <item>
+                    <name>STRAWBERRY</name>
+                    <description>Just as its name suggests! Made with Rum and a squeeze of lime.</description>
+                    <price currency="LKR">1400</price>
+                </item>
+            </subcategory>
+            <subcategory id="other" name="OTHER">
+                <item>
+                    <name>WHISKY AMBULA</name>
+                    <description>Bring out your inner Lankan uncle with this drink! Good old-fashioned whiskey mixed with lime juice and a hint of orange zest.</description>
+                    <price currency="LKR">1400</price>
+                </item>
+                <item>
+                    <name>TOM THAMAI</name>
+                    <description>Simple yet suave. Gin mixed with lime juice, topped with bubbly soda. Perfectly cool without frills.</description>
+                    <price currency="LKR">1400</price>
+                </item>
+                <item>
+                    <name>LOVELY LYCHEE</name>
+                    <description>We guarantee you will fall in love with this drink! Vodka Martini mixed with sweetened lychee syrup, garnished with a juicy lychee.</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>GNANA AKKA</name>
+                    <description>Vodka, elderflower, black currant, hibiscus + lime with a dash of magic as the name suggests!</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>APPLETINI</name>
+                    <description>Sour apple purée, lime juice, and a whole lotta vodka!</description>
+                    <price currency="LKR">1500</price>
+                </item>
+                <item>
+                    <name>MAJIK MOJITO</name>
+                    <description>Another drink you just can’t go wrong with! Rum mixed with lime juice, refreshed with mint leaves, and topped off with soda.</description>
+                    <price currency="LKR">1400</price>
+                </item>
+                <item>
+                    <name>MIGHTY MIMOSA</name>
+                    <description>Bubbly champagne with good old OJ!</description>
+                    <price currency="LKR">1600</price>
+                </item>
+                <item>
+                    <name>SEXY SANGRIA</name>
+                    <description>White, Apples, Lime, Oranges, and a splash of Orange Juice.</description>
+                    <price currency="LKR">2100</price>
+                </item>
+                <item>
+                    <name>SEXY SANGRIA</name>
+                    <description>Red Wine, Apples, Lime, Oranges, and a splash of Orange Juice.</description>
+                    <price currency="LKR">2100</price>
+                </item>
+                <item>
+                    <name>KOPI TIME</name>
+                    <description>Classic Espresso Martini the TTB way!</description>
+                    <price currency="LKR">2900</price>
+                </item>
+                <item>
+                    <name>LIIT!</name>
+                    <description>Long Island Iced Tea! Have it and get “LIIT”!</description>
+                    <price currency="LKR">2900</price>
+                </item>
+                <item>
+                    <name>BULLFROG</name>
+                    <description>You’re cut off at 2 of these!</description>
+                    <price currency="LKR">3200</price>
+                </item>
+            </subcategory>
+    </category>
+</menu>
