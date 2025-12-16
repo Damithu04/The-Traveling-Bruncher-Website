@@ -7,7 +7,8 @@
     <title>Menu | The Traveling Bruncher</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=K2D:wght@200;400;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italiana&family=K2D:wght@200;400;600&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -29,23 +30,26 @@
             <a href="Webtech.html" class="logo">
                 <img src="Layer4.png" alt="TTB Logo">
             </a>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+
             <ul class="nav-links">
                 <li><a href="Webtech.html">Home</a></li>
-                <li><a href="menupage.html" class="active">Menu</a></li>
-                <li><a href="Webtech.html">The Vibe</a></li>
-                <li><a href="Webtech.html">Find Us</a></li>
-                <li><a href="Orderpage.html" class="btn-order">Order Now</a></li>
+                <li><a href="#location">Find Us</a></li>
+
+                <li>
+                    <a href="#" onclick="toggleCart()" class="cart-icon-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+
+                <li><a href="checkout.html" class="btn-order">Proceed to Checkout</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="page-header">
-        <h1 class="main-title">Our Menu</h1>
-        <p class="subtitle">A Culinary Journey</p>
+        <h1 class="main-title">Order Now</h1>
+        <p class="subtitle">Fresh • Bold • Delicious</p>
     </header>
 
     <div class="menu-layout container">
@@ -58,15 +62,34 @@
         </main>
     </div>
 
+    <div id="cart-modal" class="cart-modal-overlay">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-cart" onclick="toggleCart()">&times;</span>
+            </div>
+
+            <ul id="cart-items-list">
+                <p class="empty-msg">Your cart is empty.</p>
+            </ul>
+
+            <div class="cart-footer-area">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">0 LKR</span>
+                </div>
+                <a href="checkout.html" class="btn-checkout-modal">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast">Item added to cart!</div>
+
     <footer id="location">
         <div class="container grid-footer">
             <div class="footer-info">
                 <h3>Visit Us</h3>
                 <p>6/46 Green Lanka Towers,<br>Nawam Mawatha, Colombo</p>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
             </div>
             <div class="copyright">
                 <p>© 2025 The Traveling Bruncher.</p>
@@ -74,8 +97,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script src="loadmenu.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
