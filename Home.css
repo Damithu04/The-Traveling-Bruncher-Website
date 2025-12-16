@@ -1,20 +1,23 @@
 /* =========================================
-   1. VARIABLES & RESET
+   1. VARIABLES & RESET (UPDATED THEME)
    ========================================= */
 :root {
-    --bg-color: #0a0a0a;
-    /* Deep Black Background */
+    --bg-color: #050505;
+    /* True Black */
     --text-primary: #ffffff;
-    /* White Text */
-    --text-secondary: #b3b3b3;
-    /* Grey Text */
-    --accent: #F07762;
-    /* Salmon Brand Color */
-    --accent-glow: rgba(240, 119, 98, 0.4);
-    /* Glow Effect */
+    /* Pure White */
+    --text-secondary: #e0e0e0;
+    /* Light Silver for readability */
+
+    /* YOUR NEW LOGO COLOR */
+    --accent: #00b1bb;
+
+    /* Calculated Glow (RGB: 0, 177, 187) */
+    --accent-glow: rgba(0, 177, 187, 0.5);
+
     --font-head: 'Italiana', serif;
     --font-body: 'K2D', sans-serif;
-    --transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -74,7 +77,7 @@ body {
 
 @keyframes load {
     to {
-        width: 150px;
+        width: 600px;
     }
 }
 
