@@ -1,0 +1,184 @@
+/* General Styles */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('SFPRODISPLAYREGULAR.OTF') format('truetype');
+  }
+
+body {
+    font-family: 'MyCustomFont', sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Success Message */
+.success-message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Back Link */
+.back-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Checkout Layout */
+.checkout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Section */
+.left-section {
+    width: 60%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Delivery Details */
+.delivery-details {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-details label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.delivery-details input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Phone Number Field */
+#phone {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Delivery Options */
+.delivery-option {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Payment */
+.payment-method {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Card Details */
+#card-details {
+    display: none;
+    margin-top: 20px;
+}
+
+#card-details label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#card-details input,
+#card-details select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#card-details input:focus,
+#card-details select:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+/* Place Order Button */
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.place-order-btn:hover {
+    background: #333;
+}
+
+/* Right Section */
+.right-section {
+    width: 50%;
+}
+
+.cart-summary {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Total */
+.order-total p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+}
