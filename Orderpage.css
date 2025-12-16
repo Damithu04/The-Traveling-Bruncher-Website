@@ -34,12 +34,12 @@ nav {
     font-family: 'K2D Light', sans-serif;
     /* Adjusted background color for better contrast with black text */
     background-color: rgb(240, 119, 98);
-    padding: 30px 0; 
+    padding: 30px 0;
     text-align: right;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     z-index: 1000;
 }
 
@@ -222,7 +222,7 @@ li a:hover {
 
 .cart {
     margin-top: 20px;
-    color: #FFFFFF;   
+    color: #FFFFFF;
     margin-bottom: 30px;
 }
 
@@ -236,14 +236,15 @@ li a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-}   
+}
 
 .viewcart:hover {
     background: #00CC2B;
 }
+
 .footer {
     background-color: rgb(22, 22, 22);
-    color: #eeeeee;   
+    color: #eeeeee;
     padding: 10px 0;
     text-align: left;
     font-family: 'Poppins', sans-serif;
@@ -261,30 +262,31 @@ li a:hover {
 }
 
 .footer-section {
-    max-width: 30%; 
+    max-width: 30%;
 }
 
 .footer-section p {
     margin-bottom: 10px;
 }
 
-.tel    {
+.tel {
     justify-content: center;
     align-items: center;
     margin-left: -105;
     margin-top: 30;
 }
 
-.num1    {
+.num1 {
     margin-left: -110;
 }
 
-.num2    {
+.num2 {
     margin-left: -90;
     margin-top: -10;
 }
 
-.terms, .privacy {
+.terms,
+.privacy {
     font-size: 14px;
     opacity: 0.7;
     margin-right: -100;
@@ -299,12 +301,12 @@ li a:hover {
     margin-bottom: 10px;
 }
 
-.email  {
+.email {
     text-align: right;
     margin-right: -100;
 }
 
-.email1  {
+.email1 {
     text-align: right;
     margin-right: -100;
 }
@@ -320,7 +322,7 @@ li a:hover {
     margin-left: 10;
     margin-right: 15px;
     transition: 0.3s;
-    
+
 
 }
 
@@ -341,12 +343,12 @@ li a:hover {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-section {
         max-width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .privacy {
         text-align: center;
     }
@@ -385,12 +387,14 @@ li a:hover {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #FFFFFF; /* Ensured text color */
+    color: #FFFFFF;
+    /* Ensured text color */
 }
 
 .menu-item-description {
     font-size: 14px;
-    color: #FFFFFF; /* Ensured text color */
+    color: #FFFFFF;
+    /* Ensured text color */
 }
 
 .menu-item-price {
@@ -398,7 +402,8 @@ li a:hover {
     font-weight: bold;
     text-align: right;
     margin-right: 15px;
-    color: #FFFFFF; /* Ensured text color */
+    color: #FFFFFF;
+    /* Ensured text color */
 }
 
 .menu-item-controls {
@@ -409,13 +414,15 @@ li a:hover {
 
 /* Cart Pop-up Modal */
 .cart-popup {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -439,7 +446,8 @@ li a:hover {
     right: 15px;
     font-size: 20px;
     cursor: pointer;
-    color: #000000; /* Ensured text color */
+    color: #000000;
+    /* Ensured text color */
 }
 
 /* Checkout button */
@@ -478,13 +486,15 @@ li a:hover {
 /* Shopping Cart Icon Hover */
 .fa-cart-shopping {
     transition: 0.3s ease, transform 0.3s ease;
-    color: #000000; /* Ensured color for visibility against salmon nav background */
+    color: #000000;
+    /* Ensured color for visibility against salmon nav background */
 }
 
 .fa-cart-shopping:hover {
     /* Changed to a darker red for better visibility */
-    color: #8B0000; 
-    transform: scale(1.5); /* Slightly increase size */
+    color: #8B0000;
+    transform: scale(1.5);
+    /* Slightly increase size */
     cursor: pointer;
 }
 
@@ -509,10 +519,25 @@ li a:hover {
 }
 
 @keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(10px); }
-    30% { opacity: 1; transform: translateY(0); }
-    70% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(10px); }
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 }
 
 /* Section headers styling */
@@ -531,30 +556,30 @@ li a:hover {
     nav {
         padding: 15px 0;
     }
-    
+
     li {
         margin-right: 10px;
     }
-    
+
     .menu-container {
         margin-top: 100px;
     }
-    
+
     .container {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-section {
         max-width: 100%;
         margin-bottom: 20px;
         text-align: center;
     }
-    
+
     .tel {
         align-items: center;
     }
-    
+
     .social-icons {
         text-align: center;
     }

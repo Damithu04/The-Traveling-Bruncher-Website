@@ -1,0 +1,269 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* --- MENU PAGE SPECIFIC STYLES --- */
+
+/* Page Header */
+.page-header {
+    padding: 120px 5% 60px;
+    text-align: center;
+    background: linear-gradient(to bottom, #00b1bb, var(--bg-color));
+}
+
+.page-header .main-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/* --- LAYOUT --- */
+.menu-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    /* Sidebar slightly narrower */
+    gap: 60px;
+    padding: 60px 5%;
+    align-items: start;
+}
+
+/* --- SIDEBAR NAVIGATION (UPDATED) --- */
+.menu-sidebar {
+    position: sticky;
+    top: 100px;
+    /* Stays fixed while scrolling */
+    padding: 15px;
+    /* Reduced padding */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+
+    /* NEW: Makes the sidebar scrollable internally if it's too tall */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar for the sidebar */
+.menu-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.menu-sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.menu-sidebar::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+.menu-sidebar:hover::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+}
+
+.menu-sidebar li {
+    margin-bottom: 4px;
+    /* Tighter spacing between items */
+}
+
+.menu-sidebar a {
+    text-decoration: none;
+    color: var(--text-secondary);
+
+    /* NEW FONT SETTINGS */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    /* Much smaller, cleaner text */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    display: block;
+    padding: 8px 12px;
+    /* Compact padding */
+    transition: 0.2s;
+    border-radius: 6px;
+}
+
+.menu-sidebar a:hover,
+.menu-sidebar a.active {
+    color: #fff;
+    /* White text on active */
+    background: var(--accent);
+    /* Salmon background for clear visibility */
+    transform: translateX(5px);
+    font-weight: 500;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* --- MENU SECTIONS --- */
+.menu-section {
+    margin-bottom: 80px;
+    scroll-margin-top: 100px;
+}
+
+.category-title {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subcategory-title {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 40px 0 25px;
+}
+
+/* --- MENU GRID & CARDS --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-glow);
+}
+
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, var(--accent-glow), transparent 60%);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.menu-card:hover::before {
+    opacity: 0.2;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.item-price {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.2rem;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.item-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.card-footer {
+    text-align: right;
+}
+
+.btn-add {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-add:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 968px) {
+    .menu-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 20px;
+    }
+
+    .menu-sidebar {
+        position: sticky;
+        /* Keep sticky on mobile or change to relative if preferred */
+        top: 80px;
+        padding: 10px;
+        z-index: 90;
+        max-height: none;
+        /* No max-height on horizontal scroll */
+        overflow-y: hidden;
+    }
+
+    .menu-sidebar ul {
+        display: flex;
+        overflow-x: auto;
+        /* Scroll horizontally */
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .menu-sidebar li {
+        margin-bottom: 0;
+    }
+
+    .menu-sidebar a {
+        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .page-header {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .page-header .main-title {
+        font-size: 3rem;
+    }
+}
