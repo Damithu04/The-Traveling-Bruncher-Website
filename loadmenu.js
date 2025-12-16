@@ -1,109 +1,121 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Load menu from XML
+document.addEventListener('DOMContentLoaded', () => {
+    const menuContainer = document.getElementById('menu-container');
+    const navContainer = document.getElementById('category-nav');
+    const loader = document.getElementById('loader');
+
+    // 1. LINKING THE XML FILE
     fetch('order.xml')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not find order.xml file");
+            }
+            return response.text();
+        })
         .then(str => new DOMParser().parseFromString(str, "text/xml"))
         .then(xml => {
-            // Select the main content container
-            const mainContent = document.querySelector('.main-content');
+            // Hide Loader
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 1000);
 
-            // Process each category in the XML
-            xml.querySelectorAll('category').forEach(category => {
-                // Create a new menu container for each category
-                const menuContainer = document.createElement('div');
-                menuContainer.className = 'menu-container';
+            // 2. PARSING XML
+            const categories = xml.querySelectorAll('category');
+            const fragment = document.createDocumentFragment();
 
-                // Add category title
-                const categoryTitle = document.createElement('h1');
-                categoryTitle.className = 'menutitle';
-                categoryTitle.id = category.getAttribute('id');
-                categoryTitle.textContent = category.getAttribute('name');
-                menuContainer.appendChild(categoryTitle);
+            categories.forEach((category, index) => {
+                const catName = category.getAttribute('name');
+                const catId = 'cat-' + index;
 
-                // Process each subcategory in the category
-                category.querySelectorAll('subcategory').forEach(subcategory => {
-                    // Create a subcategory container
-                    const subcategoryContainer = document.createElement('div');
-                    subcategoryContainer.className = 'subcategory-container';
+                // Create Sidebar Link
+                const navItem = document.createElement('li');
+                navItem.innerHTML = `<a href="#${catId}">${catName}</a>`;
+                navContainer.appendChild(navItem);
 
-                    // Add subcategory title
-                    const subcategoryTitle = document.createElement('h2');
-                    subcategoryTitle.className = 'menutitle1'; // Use the CSS class for subtitles
-                    subcategoryTitle.id = subcategory.getAttribute('id');
-                    subcategoryTitle.textContent = subcategory.getAttribute('name');
-                    subcategoryContainer.appendChild(subcategoryTitle);
+                // Create Category Section
+                const section = document.createElement('section');
+                section.className = 'menu-section';
+                section.id = catId;
+                section.innerHTML = `<h2 class="category-title">${catName}</h2>`;
 
-                    // Process each item in the subcategory
-                    subcategory.querySelectorAll('item').forEach(item => {
-                        const name = item.querySelector('name')?.textContent || 'Unnamed Item';
-                        const desc = item.querySelector('description')?.textContent || 'No description available';
-                        const priceElement = item.querySelector('price');
-                        const price = priceElement ? parseInt(priceElement.textContent) : 0;
-                        const currency = priceElement?.getAttribute('currency') || '';
+                // Handle Subcategories (e.g., Brunch -> Sweet/Savory)
+                const subcategories = category.querySelectorAll('subcategory');
 
-                        if (!name || !price) {
-                            console.warn('Skipping invalid item:', item);
-                            return; // Skip this item if data is missing
-                        }
-
-                        // Create a menu item
-                        const menuItem = document.createElement('div');
-                        menuItem.className = 'menu-item dynamic';
-                        menuItem.innerHTML = `
-                            <div class="item-details">
-                                <h2>${name}</h2>
-                                <p>${desc}</p>
-                            </div>
-                            <div class="item-controls">
-                                <span class="price">${price.toLocaleString()} ${currency}</span>
-                                <input type="number" class="quantity" min="1" value="1" aria-label="quantity">
-                                <button class="add-to-cart" onclick="addToCart('${name}', ${price}, this)">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        `;
-                        subcategoryContainer.appendChild(menuItem);
+                if (subcategories.length > 0) {
+                    subcategories.forEach(sub => {
+                        section.innerHTML += `<h3 class="subcategory-title">${sub.getAttribute('name')}</h3>`;
+                        section.appendChild(createGrid(sub.querySelectorAll('item')));
                     });
+                } else {
+                    // Handle Items directly
+                    section.appendChild(createGrid(category.querySelectorAll('item')));
+                }
 
-                    // Append the subcategory container to the menu container
-                    menuContainer.appendChild(subcategoryContainer);
-                });
-
-                // Process items directly under the category (if any)
-                category.querySelectorAll('item').forEach(item => {
-                    const name = item.querySelector('name')?.textContent || 'Unnamed Item';
-                    const desc = item.querySelector('description')?.textContent || 'No description available';
-                    const priceElement = item.querySelector('price');
-                    const price = priceElement ? parseInt(priceElement.textContent) : 0;
-                    const currency = priceElement?.getAttribute('currency') || '';
-
-                    if (!name || !price) {
-                        console.warn('Skipping invalid item:', item);
-                        return; // Skip this item if data is missing
-                    }
-
-                    // Create a menu item
-                    const menuItem = document.createElement('div');
-                    menuItem.className = 'menu-item dynamic';
-                    menuItem.innerHTML = `
-                        <div class="item-details">
-                            <h2>${name}</h2>
-                            <p>${desc}</p>
-                        </div>
-                        <div class="item-controls">
-                            <span class="price">${price.toLocaleString()} ${currency}</span>
-                            <input type="number" class="quantity" min="1" value="1" aria-label="quantity">
-                            <button class="add-to-cart" onclick="addToCart('${name}', ${price}, this)">
-                                Add to Cart
-                            </button>
-                        </div>
-                    `;
-                    menuContainer.appendChild(menuItem);
-                });
-
-                // Append the menu container to the main content
-                mainContent.appendChild(menuContainer);
+                fragment.appendChild(section);
             });
+
+            menuContainer.appendChild(fragment);
+            initScrollSpy(); // Start highlight effect
         })
-        .catch(err => console.error('Error loading menu:', err));
+        .catch(err => {
+            console.error(err);
+            loader.innerHTML = '<div style="color:white; text-align:center;"><h2>Error</h2><p>Check console for details.</p></div>';
+        });
 });
+
+// Helper: Create Grid
+function createGrid(items) {
+    const grid = document.createElement('div');
+    grid.className = 'menu-grid';
+    items.forEach(item => grid.appendChild(createCard(item)));
+    return grid;
+}
+
+// Helper: Create Card
+function createCard(itemNode) {
+    const name = itemNode.querySelector('name')?.textContent || 'Item';
+    const desc = itemNode.querySelector('description')?.textContent || 'Freshly prepared.';
+    const priceStr = itemNode.querySelector('price')?.textContent || '0';
+    const price = parseInt(priceStr.replace(/[^0-9]/g, '')).toLocaleString();
+
+    const card = document.createElement('div');
+    card.className = 'menu-card fade-in-up';
+
+    card.innerHTML = `
+        <div>
+            <div class="card-header">
+                <h3 class="item-name">${name}</h3>
+                <span class="item-price">${price} LKR</span>
+            </div>
+            <p class="item-desc">${desc}</p>
+        </div>
+        <div class="card-footer">
+            <a href="Orderpage.html" class="btn-add">
+                <i class="fas fa-plus"></i> Add
+            </a>
+        </div>
+    `;
+    return card;
+}
+
+// Helper: Highlight sidebar links
+function initScrollSpy() {
+    const sections = document.querySelectorAll('.menu-section');
+    const navLinks = document.querySelectorAll('.menu-sidebar a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: [0.1, 0.3], rootMargin: "-20% 0px -60% 0px" });
+
+    sections.forEach(section => observer.observe(section));
+}
